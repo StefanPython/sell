@@ -1,0 +1,14 @@
+2017-12-02 13:41:23.073  INFO 3868 --- [main] com.stefan.sell.sell.logTest1            : Starting logTest1 on Sefan的电脑 with PID 3868 (started by asus in E:\sell)
+2017-12-02 13:41:23.074  INFO 3868 --- [main] com.stefan.sell.sell.logTest1            : No active profile set, falling back to default profiles: default
+2017-12-02 13:41:23.165  INFO 3868 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@78123e82: startup date [Sat Dec 02 13:41:23 CST 2017]; root of context hierarchy
+2017-12-02 13:41:25.818  INFO 3868 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@78123e82: startup date [Sat Dec 02 13:41:23 CST 2017]; root of context hierarchy
+2017-12-02 13:41:25.892  INFO 3868 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-02 13:41:25.893  INFO 3868 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-02 13:41:25.927  INFO 3868 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-02 13:41:25.927  INFO 3868 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-02 13:41:25.970  INFO 3868 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-02 13:41:26.152  INFO 3868 --- [main] com.stefan.sell.sell.logTest1            : Started logTest1 in 3.706 seconds (JVM running for 4.754)
+2017-12-02 13:41:26.218  INFO 3868 --- [main] com.stefan.sell.sell.logTest1            : logtest1日志
+2017-12-02 13:41:26.224  INFO 3868 --- [main] com.stefan.sell.sell.logTest1            : name:stefan,password 1245
+2017-12-02 13:41:26.227 ERROR 3868 --- [main] com.stefan.sell.sell.logTest1            : 报错
+2017-12-02 13:41:26.232  INFO 3868 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@78123e82: startup date [Sat Dec 02 13:41:23 CST 2017]; root of context hierarchy
