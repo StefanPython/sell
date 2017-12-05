@@ -28,6 +28,10 @@ public class ProductServiceImpl implements ProductService {
         return repository.findOne(productId);
     }
 
+    /**
+     * 查询所有在架商品列表
+     * @return
+     */
     @Override
     public List<ProductInfo> findUpAll() {
         return repository.findByProductStatus(ProductStatusEnum.UP.getCode());
@@ -44,7 +48,18 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    @Transactional
     public void increaseStock(List<CartDTO> cartDTOList) {
+        for (CartDTO cartDTO:cartDTOList){
+            ProductInfo productInfo=repository.findOne(cartDTO.getProductId());
+            if (productInfo==null){
+                throw new SellException(ResultEnum.ORDERDETAIL_NOT_EXIST);
+            }
+            Integer result=productInfo.getProductStock()+cartDTO.getProductQuantity();
+            productInfo.setProductStock(result);
+            repository.save(productInfo);
+        }
+
 
     }
 
