@@ -1,5 +1,7 @@
 package com.stefan.sell.sell.utils;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Random;
 
 /**
@@ -16,7 +18,10 @@ public class KeyUtil {
     public static synchronized String genUniqueKey() {
         Random random = new Random();
         Integer number = random.nextInt(900000) + 100000;
+        long currentTime = System.currentTimeMillis();
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+        Date date = new Date(currentTime);
 
-        return System.currentTimeMillis() + String.valueOf(number);
+        return formatter.format(date) + String.valueOf(number);
     }
 }
