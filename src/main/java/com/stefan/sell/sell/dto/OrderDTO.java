@@ -1,7 +1,9 @@
 package com.stefan.sell.sell.dto;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.stefan.sell.sell.enums.OrderStatusEnum;
 import com.stefan.sell.sell.enums.PayStatusEnum;
 import com.stefan.sell.sell.pojo.OrderDetail;
+import com.stefan.sell.sell.utils.serializer.Date2LongSerializer;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -23,7 +25,9 @@ public class OrderDTO {
     private BigDecimal orderAmount;//订单总金额
     private Integer orderStatus= OrderStatusEnum.NEW.getCode();//订单状态, 默认为新下单
     private Integer payStatus= PayStatusEnum.WAIT.getCode();//支付状态, 默认未支付
+    @JsonSerialize(using =Date2LongSerializer.class)
     private Date createTime;
+    @JsonSerialize(using =Date2LongSerializer.class)
     private Date updateTime;
     private List<OrderDetail> orderDetails;
 }
